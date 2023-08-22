@@ -40,9 +40,16 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map((element, index)=>(
+         <Tweet tweet={ element } key={index}/>
+
+      ))
+
+      }
+
     </div>
   );
-}
+  }
+
 
 export default App;
